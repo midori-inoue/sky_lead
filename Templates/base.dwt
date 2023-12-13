@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>無題ドキュメント</title>
+<!-- TemplateEndEditable -->
+<!--[if lt IE 9]> 
+<script src="js/html5shiv.js"></script>
+<script type="text/javascript">
+document.createElement('main');
+</script>
+<![endif]-->
+<link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+<header>
+<div id="header_wrap">
+<div id="header_wrap_inner">
+<div id="logo"><a href="index.html"><span><img src="../img/base/logo.png" width="280" height="85" alt=""/></span><b><img src="../img/base/name.png" width="378" height="85" alt=""/></b></a></div>
+
+
+      <!--▼ グローバルナビゲーション -->
+      <nav class="global-nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+           <a href="index.html"><img src="../img/base/home.png" width="134" height="37" alt="ホーム"/>Home</a>
+          </li>
+			<li class="nav-item">
+            <a href="member.html"><img src="../img/base/staff.png" width="179" height="40" alt="スタッフ"/>Staff</a>
+          </li>
+			<li class="nav-item">
+            <a href="company.html"><img src="../img/base/company.png" width="181" height="43" alt="会社概要"/>Company</a>
+          </li>
+			<li class="nav-item">
+            <a href="service.html"><img src="../img/base/service.png"  alt="事業内容"/>Service</a>
+          </li>
+          <li class="nav-item">
+            <a href="#"><img src="../img/base/info.png" width="133" height="42" alt="お知らせ"/>Info ▼</a>
+            <div class="nav-item_sub">
+              <div class="inner">
+                <ul>
+                  <li><a href="news.html">ニュース</a></li>
+                  <li><a href="media.html">メディア</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item"><a href="contact.html"><img src="img/base/contact.png" width="179" height="43" alt="お問合せ"/>Comtact</a></li>
+        </ul>
+      </nav>
+      <!--▲ グローバルナビゲーション -->
+	
+</div>
+<div class="container">
+      <!--▼ SP：ハンバーガーメニューボタン -->
+      <div class="global-nav-header">
+        <div class="global-nav-icon">
+          <i class="fas fa-bars"></i></div>
+        </div>
+      </div>
+      <!--▲ SP：ハンバーガーメニューボタン -->
+</div>
+</header>
+<main>
+<!-- TemplateBeginEditable name="main" -->main<!-- TemplateEndEditable -->
+</main>
+<footer>
+<ul id="sns"><li><img src="../img/base/facebook.png" alt=""/></li><li><img src="../img/base/twitter.png" alt=""/></li><li><a href="https://www.instagram.com/nbdroneschool_nagoya/?r=nametag" target="_blank"><img src="../img/base/instagram.png" alt=""/></a></li><li><img src="../img/base/youtube.png" alt=""/></li><li><img src="../img/base/tiktok.png" alt=""/></li><li><img src="../img/base/mail.png" alt=""/></li></ul>
+<div id="footer_inner">
+<h2><img src="../img/base/f_menu02.png" alt="株式会社スカイリード NB DRONE SCHOOL"/></h2>
+<div id="f_navi">
+<nav id="f_menu">
+<ul><li><a href="../index.html">ホーム</a></li><li><a href="../member.html">スタッフ</a></li><li><a href="../company.html">会社情報</a></li><li><a href="../service.html">事業内容</a></li><li><a href="../info.html">お知らせ</a></li><li><a href="../contact.html">お問合せ</a></li><li><a href="policy.html">プライバシーポリシー</a></li></ul>  
+</nav>
+<address><small>© <script type="text/javascript">$y=2023;$ny=new Date().getFullYear();document.write($ny>$y?$y+'-'+$ny:$y);</script> SKY LEAD NB DRONE SCHOOL.</small></address>
+</div>
+</div>
+</footer>
+<p id="page-top"><img src="../img/base/gotop.gif" alt=""/><a href="#wrap">Go Top</a></p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/anchor_link.js"></script>
+<script src="js/scroll_slide.js"></script>
+<script src="../js/fade.js"></script>
+<script src="../js/mg_menu.js"></script>
+<script src="../js/pagetop.js"></script>
+<script src="../js/sp_touch.js"></script>
+</body>
+</html>

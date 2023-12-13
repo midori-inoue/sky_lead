@@ -1,0 +1,192 @@
+@charset "UTF-8";
+@import url("base.css");
+/*共通設定-------------------------------------------------------------------------------------------------------------------------------------*/
+/*基本設定*/
+html {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  line-height: 1.5; }
+
+main {
+  display: block; }
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box; }
+
+header a img, main a img, footer a img {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all  0.3s ease; }
+
+header a:hover img, main a:hover img, footer a:hover img {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.8; }
+
+.fade {
+  /*margin-top: 10vh;*/
+  opacity: 0;
+  transition: opacity 1s;
+  transition-delay: 0.5s; }
+
+.fade.view {
+  opacity: 1; }
+
+/*ヘッダー*/
+/*メイン*/
+#staff {
+  width: 80%;
+  margin: 0 auto; }
+  #staff #staff_head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; }
+    #staff #staff_head #staff_left {
+      width: 30%; }
+      #staff #staff_head #staff_left h1 {
+        width: 100%;
+        margin: 0 auto 3em; }
+      #staff #staff_head #staff_left #h1_txt {
+        font-size: 134%;
+        color: #000;
+        font-weight: bold;
+        text-indent: 10px; }
+    #staff #staff_head #staff_right {
+      width: 65.1%; }
+  #staff #staff_list {
+    margin: 2em 0; }
+    #staff #staff_list #menber_list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between; }
+      #staff #staff_list #menber_list .menber {
+        width: 30%;
+        margin: 1em 0; }
+        #staff #staff_list #menber_list .menber:nth-child(n+4) {
+          margin: 1em auto; }
+
+/*フッター*/
+/*共通設定ここまで-------------------------------------------------------------------------------------------------------------------------------------*/
+/* pc */
+@media screen and (min-width: 1300px) {
+  /*ヘッダー*/
+  header {
+    background-image: url(../img/menber/baner.png); }
+
+  #header_inner {
+    width: 1280px; }
+
+  /*メイン*/
+  .m_sp {
+    display: none; }
+
+  #contact {
+    width: 1280px; }
+
+  /*フッター*/
+  #footer_inner {
+    width: 1280px; } }
+/* tablet以下共通 ------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 1299px) {
+  /*ヘッダー*/
+  /*メイン*/
+  #contact {
+    width: 96%; }
+
+  #staff {
+    width: 90%;
+    margin: 0 auto;
+    align-items: center; }
+    #staff #staff_head #staff_left {
+      width: 100%; }
+      #staff #staff_head #staff_left h1 {
+        width: 50%;
+        margin: 0 0 1em 1em; }
+      #staff #staff_head #staff_left #h1_txt {
+        margin: 0 0 1em 1em;
+        width: 90%;
+        color: #000;
+        font-weight: bold;
+        text-indent: 5px; }
+    #staff #staff_head #staff_right {
+      width: 100%;
+      margin: 4em auto 1em; }
+    #staff #staff_list {
+      margin: 2em 0; }
+      #staff #staff_list #menber_list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between; }
+        #staff #staff_list #menber_list .menber {
+          width: 45%;
+          margin: 1em 0; }
+          #staff #staff_list #menber_list .menber:nth-child(n+3) {
+            margin: 1em auto; } }
+/*フッター*/
+/* tablet以下共通ここまで ------------------------------------------------------------------------------------------*/
+/* tablet1 */
+@media only screen and (min-width: 1024px) and (max-width: 1299px) {
+  /* ヘッダー */
+  header {
+    background-image: url(../img/menber/baner.png); }
+
+  /*メイン*/
+  /*フッター*/ }
+/* tablet2  */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /*基本設定*/
+  header {
+    background-image: url(../img/menber/baner.png); }
+
+  /*メイン*/ }
+/* tablet3  */
+@media only screen and (max-width: 767px) {
+  /*基本設定*/
+  /*ヘッダー*/
+  header {
+    background-image: url("../img/menber/baner _SP.png"); }
+
+  /*メイン*/
+  #staff {
+    width: 80%;
+    margin: 0 auto; }
+    #staff #staff_head #staff_left {
+      width: 100%; }
+      #staff #staff_head #staff_left h1 {
+        width: 45%;
+        margin: 0 0 1em 0; }
+      #staff #staff_head #staff_left #h1_txt {
+        margin: 0 0 1em 0;
+        width: 100%;
+        color: #000;
+        font-weight: bold; }
+    #staff #staff_head #staff_right {
+      width: 100%;
+      margin: 4em auto 1em; }
+    #staff #staff_list {
+      margin: 2em 0; }
+      #staff #staff_list #menber_list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between; }
+        #staff #staff_list #menber_list .menber {
+          width: 45%;
+          margin: 1em 0; }
+          #staff #staff_list #menber_list .menber:nth-child(n+3) {
+            margin: 1em auto; }
+
+  /*フッター*/ }
+/* smartPhone1 */
+@media only screen and (max-width: 499px) {
+  /*基本設定*/
+  /*ヘッダー*/
+  header {
+    background-image: url("../img/menber/baner _SP.png");
+    /*メイン*/ } }

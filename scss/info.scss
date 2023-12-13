@@ -1,0 +1,266 @@
+@charset "utf-8";
+@import url("base.css");
+
+/*共通設定-------------------------------------------------------------------------------------------------------------------------------------*/
+/*ヘッダー*/
+
+/*メイン*/
+@mixin heading/*h2見出し*/{
+	font-size: 187%;
+	color: #1b1464;
+}
+h1{
+    margin: 0 auto;
+    & img{
+        width: 309px;
+        display: block;
+        margin: 0;
+    }
+}
+#works{
+    margin: 5em auto 0;
+    & h2{
+        @include heading;
+        border-bottom: 5px solid #949494;
+    }
+    & ul{
+        width: 100%;
+        margin: 3em 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        & li{
+            width: 31.333%;
+            &:nth-child(n+4){
+                margin: 3em 0 0;
+            }
+            & figure{
+                width: 100%;
+            }
+            & dl{
+                margin: 1em 0 0;
+                    & dt{
+                        & a{
+                            color: #fff;
+                            font-size: 80%;
+                            text-decoration: none;
+                            -webkit-transition: all 0.3s ease;
+                            -moz-transition: all 0.3s ease;
+                            -o-transition: all 0.3s ease;
+                            transition: all  0.3s ease;
+                            padding: 0.25em 5px;
+                            &:hover,&:active{
+                                color: #fff;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                    & .category a{
+                            background-color: #258686;
+                            &:hover,&:active{
+                                background-color: #34BCBC;
+                            }
+                        }
+                & .category2 a{
+                            background-color: #DB4AEF;
+                            &:hover,&:active{
+                                background-color: #E374F2;
+                            }
+                        }
+                    & dd{
+                        & a{
+                            font-size: 125%;
+                            font-weight: bold;
+                            color: #000;
+                            -webkit-transition: all 0.3s ease;
+                            -moz-transition: all 0.3s ease;
+                            -o-transition: all 0.3s ease;
+                            transition: all  0.3s ease;
+                            text-decoration: none;
+                            &:hover,&:active{
+                                color: #3fa7f3;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+        }
+    }
+}
+/*ページャーcss*/
+.pager {
+    border-top: 1px solid #ccc;
+  margin: 8em auto 0;
+  position: relative;
+    height: 8em;
+}
+
+.pager ul {
+  display: flex;
+  position: absolute;
+  top: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%); }
+
+.pager ul li {
+  margin: 0 5px; }
+
+.pager ul li span,
+.pager ul li a {
+  display: block;
+  padding: 0.6em 1em;
+  box-sizing: border-box;
+border:1px solid #666;
+}
+
+.pager ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.pager ul li a:hover {
+  background: #1b1464;
+  color: #fff;
+}
+
+.pager ul .current {
+  background-color: #1b1464;
+    border: none;
+  color: #fff;
+    font-weight: bold;
+}
+.pager ul .current2 a {
+    border: none;
+  color: #1b1464;
+    font-weight: bold;
+    border:1px solid #666;
+}
+/*フッター*/
+
+/*共通設定ここまで-------------------------------------------------------------------------------------------------------------------------------------*/
+/* pc */
+@media screen and (min-width: 1300px)  {
+/*ヘッダー*/
+header{
+    background-image: url("../img/info/top_img.png"); 
+}
+    
+/*メイン*/
+h1,#works,.pager{
+    width: 1280px;
+}   
+/*フッター*/
+
+}
+
+/* tablet以下共通 ------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 1299px)  {
+/*ヘッダー*/
+
+/*メイン*/
+h1,#works,.pager{
+    width: 96%;
+}   
+/*フッター*/
+
+}
+/* tablet以下共通ここまで ------------------------------------------------------------------------------------------*/
+
+/* tablet1 */
+@media only screen and (min-width: 1024px) and (max-width: 1299px)  {
+/*ヘッダー*/
+header{
+    background-image: url("../img/info/top_img.png"); 
+}
+/*メイン*/
+
+/*フッター*/
+}
+
+/* tablet2  */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+/*ヘッダー*/
+header{
+    background-image: url("../img/info/top_img.png"); 
+}
+/*メイン*/
+/*ページャー*/
+  .pager ul li span,
+  .pager ul li a {
+    display: block;
+    padding: 0.6em 1em;
+    box-sizing: border-box; }
+
+  .pager ul li:nth-child(1) a, .pager ul li:last-child a {
+    padding: 0.6em 0;
+    width: 70px;
+    text-align: center; }
+/*フッター*/
+}
+
+/* tablet3  */
+@media only screen and (max-width: 767px) {
+/*ヘッダー*/
+header{
+    background-image: url("../img/info/top_img_sp.png"); 
+    }
+/*メイン*/
+@mixin heading/*h2見出し*/{
+	font-size: 160%;
+}
+h1{
+    margin: 0 auto;
+    & img{
+        width: 206px;
+    }
+}
+#works{
+    margin: 2.5em auto 0;
+    & h2{
+        @include heading;
+    }
+    & ul{
+        margin: 1.5em 0 0;
+        flex-direction: column;
+        & li{
+            width: 80%;
+            margin: 0 auto;
+            &:nth-child(n+2){
+                margin: 3em auto 0;
+            }
+        }
+    }
+}
+
+/*ページャー*/
+    .pager {
+  margin: 2em auto 0; }
+  .pager ul li:nth-child(1) a, .pager ul li:last-child a {
+    padding: 0.6em 0;
+    width: 60px;
+    text-align: center; }
+
+  .pager ul li {
+    margin: 0 2.7px; }
+
+  .pager ul li span,
+  .pager ul li a {
+    display: block;
+    padding: 0.6em 0.5em;
+    box-sizing: border-box; }
+
+/*フッター*/
+}
+
+/* smartPhone1 */
+@media only screen and (max-width: 499px) {
+/*ヘッダー*/
+
+/*メイン*/
+
+/*フッター*/
+
+}
+

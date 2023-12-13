@@ -1,0 +1,161 @@
+@charset "utf-8";
+@import url("base.css");
+@import url("../contact_form/mfp.statics/mailformpro.css");
+
+
+
+/*共通設定-------------------------------------------------------------------------------------------------------------------------------------*/
+/*基本設定*/
+
+@mixin heading/*h2見出し*/{
+	font-size: 187%;
+	color: #1b1464;
+}
+h1{
+    margin: 0 auto;
+    & img{
+        width: 461px;
+        display: block;
+        margin: 0;
+    }
+}
+#error{
+	margin: 5em auto 0;
+	& p{
+		margin: 0 0 1em;
+	}
+    & h2{
+        @include heading;
+    margin: 0 0 1em;
+    }
+	& ul{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        & li{
+            width: 48%;
+            & a{
+				background-color: #3fa7f3;
+				color: #fff;
+				text-decoration: none;
+				font-weight: bold;
+				display: block;
+				width: 250px;
+				padding: 1em 0;
+				text-align: center;
+				margin: 2em auto 0;
+				-webkit-transition: all 0.3s ease;
+				-moz-transition: all 0.3s ease;
+				-o-transition: all 0.3s ease;
+				transition: all  0.3s ease;
+				&:hover,&:active{
+					background-color: #5AB3F4;
+					text-decoration: none;
+				}
+			}
+        }
+			
+		
+	}
+}
+
+
+/*共通設定ここまで-------------------------------------------------------------------------------------------------------------------------------------*/
+/* pc */
+@media screen and (min-width: 1300px)  {
+/*ヘッダー*/
+    header{
+    background-image: url("../img/contact/top_img.png"); 
+}
+    
+/*メイン*/
+.m_sp{
+	display: none;
+	}
+h1,#error{
+		width: 1280px;
+}
+}
+
+/* tablet以下共通 ------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 1299px)  {
+	
+/*メイン*/
+h1,#error{
+		width: 96%;
+}
+}
+/* tablet以下共通ここまで ------------------------------------------------------------------------------------------*/
+
+/* tablet1 */
+@media only screen and (min-width: 1024px) and (max-width: 1299px)  {
+/*ヘッダー*/
+    header{
+    background-image: url("../img/contact/top_img.png"); 
+}
+
+/*メイン*/
+
+}
+
+/* tablet2  */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+/*基本設定*/
+
+/*ヘッダー*/
+    header{
+    background-image: url("../img/contact/top_img.png"); 
+}
+
+/*メイン*/
+
+}
+
+/* tablet3  */
+@media only screen and (max-width: 767px) {
+/*基本設定*/
+    
+/*ヘッダー*/
+    header{
+    background-image: url("../img/contact/top_img_sp.png"); 
+}
+
+/*メイン*/
+h1{
+    margin: 0 auto;
+    & img{
+        width: 250px;
+        display: block;
+        margin: 0;
+    }
+}
+#error{
+	margin: 2.5em auto 0;
+    & h2{
+        font-size: 160%;
+    }
+	& ul{
+        width: 80%;
+        flex-direction: column;
+        & li{
+            width: 100%;
+            & a{
+				width: 100%;
+			}
+        }
+			
+		
+	}
+}
+ 
+}
+
+/* smartPhone1 */
+@media only screen and (max-width: 499px) {
+/*基本設定*/
+/*メイン*/
+
+}
+

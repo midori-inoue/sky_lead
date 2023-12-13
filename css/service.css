@@ -1,0 +1,378 @@
+@charset "UTF-8";
+@import url("base.css");
+/*共通設定-------------------------------------------------------------------------------------------------------------------------------------*/
+/*ヘッダー*/
+/*メイン*/
+h1 {
+  margin: 0 auto; }
+  h1 img {
+    width: 309px;
+    display: block;
+    margin: 0; }
+
+#service_top {
+  margin: 5em auto 0; }
+  #service_top h2 {
+    font-size: 187%;
+    color: #1b1464;
+    border-bottom: 5px solid #949494; }
+  #service_top p {
+    margin: 2em 0 0; }
+
+#service1, #service2, #service3, #service4, #service5 {
+  width: 100%;
+  margin: 0;
+  position: relative; }
+  #service1 .service_inner, #service2 .service_inner, #service3 .service_inner, #service4 .service_inner, #service5 .service_inner {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -12em;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%); }
+    #service1 .service_inner h2, #service2 .service_inner h2, #service3 .service_inner h2, #service4 .service_inner h2, #service5 .service_inner h2 {
+      margin: -5em 0 0; }
+      #service1 .service_inner h2 img, #service2 .service_inner h2 img, #service3 .service_inner h2 img, #service4 .service_inner h2 img, #service5 .service_inner h2 img {
+        margin: 0 0 1em; }
+      #service1 .service_inner h2 a, #service2 .service_inner h2 a, #service3 .service_inner h2 a, #service4 .service_inner h2 a, #service5 .service_inner h2 a {
+        display: block;
+        color: #949494;
+        text-decoration: none; }
+        #service1 .service_inner h2 a:hover, #service1 .service_inner h2 a:active, #service2 .service_inner h2 a:hover, #service2 .service_inner h2 a:active, #service3 .service_inner h2 a:hover, #service3 .service_inner h2 a:active, #service4 .service_inner h2 a:hover, #service4 .service_inner h2 a:active, #service5 .service_inner h2 a:hover, #service5 .service_inner h2 a:active {
+          color: #949494;
+          text-decoration: underline; }
+    #service1 .service_inner dl, #service2 .service_inner dl, #service3 .service_inner dl, #service4 .service_inner dl, #service5 .service_inner dl {
+      width: calc(100% - 500px); }
+      #service1 .service_inner dl dt, #service2 .service_inner dl dt, #service3 .service_inner dl dt, #service4 .service_inner dl dt, #service5 .service_inner dl dt {
+        width: 100%;
+        font-size: 187%;
+        color: #1b1464;
+        font-size: 187%;
+        color: #3fa7f3;
+        font-weight: bold;
+        margin: 0 0 0.5em; }
+      #service1 .service_inner dl dd, #service2 .service_inner dl dd, #service3 .service_inner dl dd, #service4 .service_inner dl dd, #service5 .service_inner dl dd {
+        width: 100%; }
+
+#service1 .service_inner h2, #service5 .service_inner h2 {
+  width: 400px; }
+  #service1 .service_inner h2 img, #service5 .service_inner h2 img {
+    width: 243px; }
+
+#service2 .service_inner h2 {
+  width: 500px; }
+  #service2 .service_inner h2 img {
+    width: 390px; }
+
+#service3 .service_inner h2 {
+  width: 400px; }
+  #service3 .service_inner h2 img {
+    width: 356px; }
+
+#service4 .service_inner h2 {
+  width: 400px; }
+  #service4 .service_inner h2 img {
+    width: 394px; }
+
+/*スクロールでスライドインここから*/
+.Item {
+  width: 100%;
+  /*お好みで*/
+  position: relative;
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
+  margin: 0 0 15em; }
+
+.Item-Box {
+  overflow: hidden; }
+
+.Item-Box-ImgBox {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  -webkit-transform: translate3d(-100.5%, 0, 0);
+  transform: translate3d(-100.5%, 0, 0);
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+  -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s; }
+
+.Item-Box.isShow .Item-Box-ImgBox {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.Item-Box-ImgBox:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #000;
+  /*黒ブロックの色指定*/
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: right;
+  transform-origin: right;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition-delay: .4s;
+  transition-delay: .4s; }
+
+.Item-Box.isShow .Item-Box-ImgBox:before {
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1); }
+
+.Item-Box-ImgBox-Img {
+  width: 100%;
+  padding-top: 42.5%;
+  /*画像比率指定*/
+  transition-duration: 4s;
+  -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); }
+
+/*フッター*/
+/*共通設定ここまで-------------------------------------------------------------------------------------------------------------------------------------*/
+/* pc */
+@media screen and (min-width: 1300px) {
+  /*ヘッダー*/
+  header {
+    background-image: url("../img/service/top_img.png"); }
+
+  /*メイン*/
+  h1, #service_top, .service_inner {
+    width: 1280px; }
+
+  /*フッター*/ }
+/* tablet以下共通 ------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 1299px) {
+  /*ヘッダー*/
+  /*メイン*/
+  h1, #service_top, .service_inner {
+    width: 96%; }
+
+  /*フッター*/ }
+/* tablet以下共通ここまで ------------------------------------------------------------------------------------------*/
+/* tablet1 */
+@media only screen and (min-width: 1024px) and (max-width: 1299px) {
+  /*ヘッダー*/
+  header {
+    background-image: url("../img/service/top_img.png"); }
+
+  /*メイン*/
+  #service1 .service_inner, #service2 .service_inner, #service3 .service_inner, #service4 .service_inner, #service5 .service_inner {
+    bottom: -10em; }
+    #service1 .service_inner dl, #service2 .service_inner dl, #service3 .service_inner dl, #service4 .service_inner dl, #service5 .service_inner dl {
+      width: calc(100% - 350px); }
+
+  #service1 .service_inner h2, #service5 .service_inner h2 {
+    width: 350px; }
+    #service1 .service_inner h2 img, #service5 .service_inner h2 img {
+      width: 200px; }
+
+  #service2 .service_inner h2 {
+    width: 350px; }
+    #service2 .service_inner h2 img {
+      width: 290px; }
+
+  #service3 .service_inner h2 {
+    width: 350px; }
+    #service3 .service_inner h2 img {
+      width: 256px; }
+
+  #service4 .service_inner h2 {
+    width: 350px; }
+    #service4 .service_inner h2 img {
+      width: 294px; }
+
+  /*フッター*/ }
+/* tablet2  */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /*ヘッダー*/
+  header {
+    background-image: url("../img/service/top_img.png"); }
+
+  /*メイン*/
+  #service1 .service_inner, #service2 .service_inner, #service3 .service_inner, #service4 .service_inner, #service5 .service_inner {
+    bottom: -13em; }
+    #service1 .service_inner dl, #service2 .service_inner dl, #service3 .service_inner dl, #service4 .service_inner dl, #service5 .service_inner dl {
+      width: calc(100% - 300px); }
+      #service1 .service_inner dl dt, #service2 .service_inner dl dt, #service3 .service_inner dl dt, #service4 .service_inner dl dt, #service5 .service_inner dl dt {
+        width: 100%;
+        font-size: 187%;
+        color: #1b1464;
+        font-size: 187%;
+        color: #3fa7f3;
+        font-weight: bold;
+        margin: 0 0 0.5em; }
+      #service1 .service_inner dl dd, #service2 .service_inner dl dd, #service3 .service_inner dl dd, #service4 .service_inner dl dd, #service5 .service_inner dl dd {
+        width: 100%; }
+
+  #service1 .service_inner h2, #service5 .service_inner h2 {
+    width: 300px; }
+    #service1 .service_inner h2 img, #service5 .service_inner h2 img {
+      width: 200px; }
+
+  #service2 .service_inner h2 {
+    width: 300px; }
+    #service2 .service_inner h2 img {
+      width: 290px; }
+
+  #service3 .service_inner h2 {
+    width: 300px; }
+    #service3 .service_inner h2 img {
+      width: 256px; }
+
+  #service4 .service_inner h2 {
+    width: 300px; }
+    #service4 .service_inner h2 img {
+      width: 294px; }
+
+  /*フッター*/ }
+/* tablet3  */
+@media only screen and (max-width: 767px) {
+  /*ヘッダー*/
+  header {
+    background-image: url("../img/service/top_img_sp.jpg"); }
+
+  /*メイン*/
+  h1 {
+    margin: 0 auto; }
+    h1 img {
+      width: 200px; }
+
+  #message {
+    margin: 2.5em auto 0; }
+    #message dl {
+      margin: 1.5em 0 0;
+      flex-direction: column; }
+      #message dl dt {
+        width: 100%;
+        margin: 0 auto 1em; }
+      #message dl dd {
+        width: 100%;
+        line-height: 2; }
+
+  #company {
+    margin: 2.5em auto 0; }
+    #company h2 {
+      font-size: 160%;
+      border-bottom: 3px solid #949494; }
+    #company table {
+      margin: 1.5em 0 0; }
+      #company table tr th {
+        display: block;
+        width: 100%;
+        padding: 1em 0 0; }
+      #company table tr td {
+        display: block;
+        width: 100%;
+        padding: 0 0 1em; }
+
+  #history {
+    margin: 5em auto 0; }
+    #history h2 {
+      font-size: 160%;
+      border-bottom: 3px solid #949494; }
+    #history table {
+      margin: 1.5em 0 0; }
+      #history table tr th {
+        display: block;
+        width: 100%;
+        padding: 1em 0 0; }
+      #history table tr td {
+        display: block;
+        width: 100%;
+        padding: 0 0 1em; }
+
+  #map {
+    margin: 2.5em auto 0; }
+    #map h2 {
+      font-size: 160%;
+      border-bottom: 3px solid #949494; }
+    #map .ggmap {
+      margin: 1.5em 0 0;
+      padding-bottom: 56.25%; }
+
+  /*フッター*/ }
+/* smartPhone1 */
+@media only screen and (max-width: 499px) {
+  /*ヘッダー*/
+  /*メイン*/
+  h1 img {
+    width: 200px; }
+
+  #service_top {
+    margin: 2.5em auto 0; }
+    #service_top h2 {
+      font-size: 160%; }
+    #service_top p {
+      margin: 1em 0 0; }
+
+  #service1, #service2, #service3, #service4, #service5 {
+    width: 100%;
+    margin: 0;
+    position: relative; }
+    #service1 .service_inner, #service2 .service_inner, #service3 .service_inner, #service4 .service_inner, #service5 .service_inner {
+      flex-direction: column;
+      position: static;
+      top: 0;
+      bottom: 0;
+      left: 0%;
+      transform: translateX(0%);
+      -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%); }
+      #service1 .service_inner h2, #service2 .service_inner h2, #service3 .service_inner h2, #service4 .service_inner h2, #service5 .service_inner h2 {
+        margin: -2.5em 0 0; }
+      #service1 .service_inner dl, #service2 .service_inner dl, #service3 .service_inner dl, #service4 .service_inner dl, #service5 .service_inner dl {
+        width: 100%; }
+        #service1 .service_inner dl dt, #service2 .service_inner dl dt, #service3 .service_inner dl dt, #service4 .service_inner dl dt, #service5 .service_inner dl dt {
+          font-size: 160%; }
+
+  #service1 .service_inner h2, #service5 .service_inner h2 {
+    width: 100%;
+    margin: 0 0 1em; }
+    #service1 .service_inner h2 img, #service5 .service_inner h2 img {
+      display: block;
+      width: 50%;
+      margin: 0 auto 0.5em; }
+    #service1 .service_inner h2 a, #service5 .service_inner h2 a {
+      text-align: center; }
+
+  #service2 .service_inner h2 {
+    width: 50%;
+    margin: 0 auto 1em; }
+    #service2 .service_inner h2 img {
+      width: 100%; }
+
+  #service3 .service_inner h2 {
+    width: 50%;
+    margin: 0 auto 1em; }
+    #service3 .service_inner h2 img {
+      width: 100%; }
+
+  #service4 .service_inner h2 {
+    width: 50%;
+    margin: 0 auto 1em; }
+    #service4 .service_inner h2 img {
+      width: 100%; }
+
+  .Item {
+    margin: 0; }
+
+  .Item-Box-ImgBox-Img {
+    padding-top: 62.5%;
+    /*画像比率指定*/ }
+
+  /*フッター*/ }

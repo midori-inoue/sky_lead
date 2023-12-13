@@ -1,0 +1,10 @@
+# ベーシック認証
+AuthType Basic
+AuthName "Secret"
+AuthUserFile /home/rakutsu-lp/www/sky_lead/.htpasswd
+<limit GET>
+require valid-user
+</limit>
+
+# 404
+ErrorDocument 404 /404.html
